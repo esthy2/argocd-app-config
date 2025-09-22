@@ -118,5 +118,6 @@ eksctl delete cluster --name esthytech-eksctl-cluster --region us-east-1
 
 * ArgoCD Configuration: [https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/)
 
+* Kubenetes Documentation: [https://kubernetes.io/docs/tasks/tools/](https://kubernetes.io/docs/home/)
 
-
+* EKSCTL: https://eksctl.io/installation/
