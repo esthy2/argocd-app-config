@@ -71,13 +71,12 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 # you can change and delete init password
 
-```bash
 ### Create an application in Argo-CD using a YAML file
 
 1. Clone the git repository: ``` git clone https://github.com/utrains/argocd-app-config.git ```
 2. Create the application by applying the application.yaml file in argocd namespace: ``` kubectl apply -f application.yaml -n argocd ```
 3. Open the Argo CD UI to see all the resources. Navigate through them to see their specifications.
-```
+
 ### Exercise:
 Make the following actions on the deployment file to see how Argo CD update the deployment to match the repo state:
 1. Change the deployment name
@@ -97,12 +96,12 @@ kubectl delete -f application.yaml -n argocd
 ```bash
 kubectl delete all --all -n argocd
 ```
-```bash
 3. Delete argocd and myapp namespaces:
+ ```bash
 kubectl delete namespace argocd
-```
 kubectl delete namespace myapp
 ```
+
 
 5. Delete the EKS cluster:
 ```
