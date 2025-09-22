@@ -77,7 +77,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 1. Clone the git repository: ``` git clone https://github.com/utrains/argocd-app-config.git ```
 2. Create the application by applying the application.yaml file in argocd namespace: ``` kubectl apply -f application.yaml -n argocd ```
 3. Open the Argo CD UI to see all the resources. Navigate through them to see their specifications.
-
+```
 ### Exercise:
 Make the following actions on the deployment file to see how Argo CD update the deployment to match the repo state:
 1. Change the deployment name
@@ -105,7 +105,7 @@ kubectl delete namespace myapp
 ```
 eksctl delete cluster --name utrains-eksctl-cluster
 
-```
+
 
 ### Links to Official Documentation of Argo CD:
 
@@ -114,3 +114,6 @@ eksctl delete cluster --name utrains-eksctl-cluster
 * Login to ArgoCD: [https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli](https://argo-cd.readthedocs.io/en/stable/getting_started/#4-login-using-the-cli)
 
 * ArgoCD Configuration: [https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/)
+
+
+
