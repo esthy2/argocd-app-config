@@ -21,12 +21,12 @@ aws sts get-caller-identity
 ```
 ## 3. Create an EKS cluster:
 ```bash
-eksctl create cluster --name utrains-eksctl-cluster --region us-east-1 --nodegroup-name my-nodes --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 2
+eksctl create cluster --name esthytech-eksctl-cluster --region us-east-1 --nodegroup-name my-nodes --node-type t3.medium --nodes 2 --nodes-min 1 --nodes-max 2
 ```
 ## 4- Update the kubeconfig for the new cluster:
 
 ```bash
-aws eks --region us-east-1 update-kubeconfig --name utrains-eksctl-cluster
+aws eks --region us-east-1 update-kubeconfig --name esthytech-eksctl-cluster
 ```
 ## 5- Verify Cluster Nodes:
 ```bash
@@ -73,7 +73,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ### Create an application in Argo-CD using a YAML file
 
-1. Clone the git repository: ``` git clone https://github.com/utrains/argocd-app-config.git ```
+1. Clone the git repository: ``` https://github.com/esthy2/argocd-app-config.git ```
 2. Create the application by applying the application.yaml file in argocd namespace: ``` kubectl apply -f application.yaml -n argocd ```
 3. Open the Argo CD UI to see all the resources. Navigate through them to see their specifications.
 
@@ -105,7 +105,7 @@ kubectl delete namespace myapp
 
 5. Delete the EKS cluster:
 ```
-eksctl delete cluster --name utrains-eksctl-cluster
+eksctl delete cluster --name esthytech-eksctl-cluster --region us-east-1
 ```
 
 
